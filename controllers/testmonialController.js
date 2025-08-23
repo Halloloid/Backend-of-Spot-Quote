@@ -22,7 +22,7 @@ const createTestMonial = async(req,res)=>{
             rating,
             description,
             location,
-            image : req.file ? `/uploads/${req.file.filename}` : null
+            image : req.file ? req.file.path : null
         });
         await newTestMonial.save();
         res.status(201).json(newTestMonial);
