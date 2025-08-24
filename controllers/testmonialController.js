@@ -32,7 +32,9 @@ const createTestMonial = async(req,res)=>{
             rating,
             description,
             location,
-            image : imageUrl
+            image : imageUrl,
+            userId,
+            userName
         });
         await newTestMonial.save();
         res.status(201).json(newTestMonial);
