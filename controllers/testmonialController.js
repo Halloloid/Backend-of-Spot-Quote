@@ -14,8 +14,8 @@ const getAllTestMonials = async(req,res)=>{
 
 const createTestMonial = async(req,res)=>{
     try {
-        const {type,item,price,rating,description,location,image} = req.body;
-        
+        const {type,item,price,rating,description,location,image,userId,userName} = req.body;
+
         let imageUrl = null;
 
         if (req.file) {
